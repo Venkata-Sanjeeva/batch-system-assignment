@@ -1,0 +1,270 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #003366;
+    padding: 20px 50px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+    animation-name: navBarSlideInFromTop;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+.brand-title {
+    font-size: 1.5rem;
+    color: white;
+    cursor: pointer;
+}
+
+.navbar-links {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-links ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.navbar-links li {
+    margin: 0 10px;
+}
+
+.navbar-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.navbar-links a:hover {
+    color: #FF4500;
+    transform: scale(1.1);
+}
+
+
+.toggle-button {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    cursor: pointer;
+}
+
+.toggle-button .bar {
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+
+.hero {
+    background-image: linear-gradient(to left, #050C9C, #3ABEF9);
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+    min-height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.hero-content button {
+    background-color: #FF4500;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+
+.hero-content button:hover {
+    background-color: #FF6347;
+}
+
+.features {
+    background-image: linear-gradient(to right, #FF5733, #FFC300);
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.features-grid {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.gallery {
+    background-image: linear-gradient(to top, #FF69B4, #FFB6C1);
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.gallery-grid {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+}
+
+.testimonials {
+    background-image: linear-gradient(to bottom, #66CCFF, #FFFFFF);
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.testimonials-grid {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.pricing {
+    background-image: linear-gradient(to right, #7D3C98, #BB8FCE);
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.pricing-title {
+    color: white;
+    font-size: 34px;
+    text-shadow: 7px 7px 6px rgb(0, 0, 0);
+}
+
+.pricing-grid {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.pricing-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.price-features {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+    border: 2px solid;
+    height: 260px;
+    width: 250px;
+}
+
+.price-features:hover {
+    border-radius: 14px;
+    scale: 1.09;
+    transition: 0.4s ease;
+}
+
+.price-features p {
+    font-size: 20px;
+    color: white;
+}
+
+.price-features ol {
+    padding: 0;
+    margin: 0;
+}
+
+.price-features ol li {
+    list-style: none;
+    line-height: 2;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.contact {
+    background-image: linear-gradient(to top, #FF4500, #FFD700);
+    padding: 50px 20px;
+    text-align: center;
+}
+
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 6px;
+}
+
+@keyframes navBarSlideInFromTop {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* The Below Code Is Applicable For Mobile Responsive Website*/
+
+@media (max-width: 768px) {
+    .toggle-button {
+        display: flex;
+    }
+    
+    .navbar-links {
+        display: none;
+        width: 100%;
+    }
+    
+    .navbar-links ul {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .navbar-links ul li {
+        text-align: center;
+        margin: 10px 0;
+    }
+    
+    .active {
+        display: flex;
+        flex-direction: column;
+    }
+}
